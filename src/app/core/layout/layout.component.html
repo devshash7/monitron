@@ -1,0 +1,11 @@
+<p>{{layout()}}</p>
+
+<div [ngSwitch]="layout()">
+  <div *ngSwitchCase="1">
+    <mn-sidebar></mn-sidebar>
+    <ng-content select="main-content"></ng-content>
+  </div>
+  <div *ngSwitchDefault>
+    <ng-content></ng-content>
+  </div>
+</div>
